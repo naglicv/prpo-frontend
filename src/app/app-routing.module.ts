@@ -9,7 +9,6 @@ const routes: Routes = [
     {path: '', redirectTo: '/filmi', pathMatch: 'full'},
     {path: 'filmi', component: FilmiComponent},
     {path: 'filmi/:id', component: FilmPodrobnostComponent},
-    {path: 'filmi/:id/dodaj', component: FilmDodajComponent}
 ];
 
 @NgModule({

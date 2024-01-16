@@ -14,6 +14,7 @@ import { OceneService } from './seznami/services/ocene.service';
 import { OceneComponent } from './seznami/ocene.component';
 import { UporabnikComponent } from './seznami/uporabnik.component';
 import { UporabnikiService } from './seznami/services/uporabniki.service';
+import { ZanriService } from './seznami/services/zanri.service';
 
 @NgModule({
     imports: [
@@ -33,7 +34,8 @@ import { UporabnikiService } from './seznami/services/uporabniki.service';
     providers: [
         FilmiService,
         OceneService,
-        UporabnikiService
+        UporabnikiService,
+        ZanriService
     ],
     bootstrap: [AppComponent]
 })
