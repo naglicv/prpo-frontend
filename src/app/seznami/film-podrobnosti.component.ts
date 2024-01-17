@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params, Router} from '@angular/router';
-import {Location} from '@angular/common';
 
 import { switchMap } from 'rxjs/operators';
 
@@ -18,7 +17,7 @@ import {FilmiService} from './services/filmi.service';
                         <h3 class="film-title">{{film.ime}} </h3>
                         <span>{{film.zanr.ime}} {{film.rating}}/10</span>
                     </div>
-                    <button style="height: 60px !important;"(click)="nazaj()">Nazaj</button> 
+                    <button style="height: 60px !important;" (click)="nazaj()">Nazaj</button> 
                 </div>
                 <hr>
                 <p class="opis-filma">
@@ -34,23 +33,18 @@ import {FilmiService} from './services/filmi.service';
 export class FilmPodrobnostComponent implements OnInit {
     film: Film;
 
-    constructor(private seznamService: FilmiService,
+    constructor(private filmService: FilmiService,
                 private route: ActivatedRoute,
-                private location: Location,
                 private router: Router) {
     }
 
     ngOnInit(): void {
        this.route.params.pipe(
-            switchMap((params: Params) => this.seznamService.getFilm(+params['id'])))
+            switchMap((params: Params) => this.filmService.getFilm(+params['id'])))
             .subscribe(film => {
                 console.log(film);
                 this.film = film;
             });
-    }
-
-    dodajFilm(): void {
-        this.router.navigate(['filmi/' + this.film.id + '/dodaj']);
     }
 
     nazaj(): void {

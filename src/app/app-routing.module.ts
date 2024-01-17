@@ -3,8 +3,8 @@ import {RouterModule, Routes} from '@angular/router';
 
 import { FilmiComponent } from './seznami/filmi.component';
 import { FilmPodrobnostComponent } from './seznami/film-podrobnosti.component';
-import { FilmDodajComponent } from './seznami/film-dodaj.component';
 
+// Preslikava URL poti na komponente
 const routes: Routes = [
     {path: '', redirectTo: '/filmi', pathMatch: 'full'},
     {path: 'filmi', component: FilmiComponent},

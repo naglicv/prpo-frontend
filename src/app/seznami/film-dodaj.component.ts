@@ -20,17 +20,17 @@ import { ZanriService } from './services/zanri.service';
                     </tr>
                     <tr>
                         <td><label for="opis">Opis</label></td>
-                        <td><textarea [(ngModel)]="film.opis" id="opis" name="opis" placeholder="American in Kazakhstan."></textarea></td>
+                        <td><textarea [(ngModel)]="film.opis" id="opis" name="opis" required placeholder="American in Kazakhstan."></textarea></td>
                     </tr>
                     <tr>
-                        <td><label for="opis">Rating</label></td>
-                        <td><input [(ngModel)]="film.rating" id="opis" name="rating" type="number" min="1" max="10" placeholder=10/></td>
+                        <td><label for="rating">Rating</label></td>
+                        <td><input [(ngModel)]="film.rating" id="rating" name="rating" required type="number" min="1" max="10" placeholder=10/></td>
                     </tr>
 
                     <tr>
                         <td><label for="zanr">Žanr</label></td>
                         <td>
-                            <select [(ngModel)]="zanrId" id="zanr" name="zanr">
+                            <select [(ngModel)]="zanrId" id="zanr" name="zanr" required>
                                 <option *ngFor="let zanr of zanri" [value]="zanr.id">{{zanr.ime}}</option>
                             </select>
                         </td>

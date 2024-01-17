@@ -16,6 +16,9 @@ import { UporabnikComponent } from './seznami/uporabnik.component';
 import { UporabnikiService } from './seznami/services/uporabniki.service';
 import { ZanriService } from './seznami/services/zanri.service';
 
+// Korenski modul Angular aplikacije
+// Uvaža in deklarira komponente in storitve, ki se bodo uporabljale v aplikaciji.
+
 @NgModule({
     imports: [
         BrowserModule,

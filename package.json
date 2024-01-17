@@ -1,7 +1,7 @@
 {
-  "name": "nakupovalni-seznami-frontend",
+  "name": "priporocila-filmi-frontend",
   "version": "1.0.0",
-  "description": "Primer spletne aplikacije za predavanja in vaje PRPO.",
+  "description": "Spletna aplikacija za priporočila in ocenjevanje filmov.",
   "scripts": {
     "build": "ng build",
     "ng": "ng",
